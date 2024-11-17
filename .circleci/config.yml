@@ -6,7 +6,7 @@ jobs:
       env:
         type: integer
     docker:
-      - image: cimg/python
+      - image: cimg/python:3.10.5
     steps:
       - run: echo hi from << parameters.env >>
       - run: 
