@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+         os: [ubuntu-latest, ubuntu-latest, macos-13, macos-13, macos-13]
+    timeout-minutes: 360
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: mkdir runner
+      - name: Setup App
+        working-directory: ./runner
+        run: |
+              if [ "$RUNNER_OS" == "Linux" ]; then
+                  echo LINUX
+              else
+                  echo MACOS
+              fi
+        shell: bash
