@@ -3,7 +3,7 @@ version: 2.1
 executors:
   linux:
     docker:
-      - image: cimg/node:21.6.2
+      - image: cimg/python:3.10.5
 
 jobs:
   test:
